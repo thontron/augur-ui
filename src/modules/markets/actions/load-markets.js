@@ -9,6 +9,7 @@ import {
   MARKET_RECENTLY_TRADED,
   MARKET_FEE,
   MARKET_OPEN_INTEREST,
+  MARKET_LIQUIDITY_10,
   MARKET_LIQUIDITY_15,
   MARKET_LIQUIDITY_20
 } from "modules/filter-sort/constants/market-sort-params";
