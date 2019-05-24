@@ -9,7 +9,8 @@ import {
   MARKET_OPEN_INTEREST,
   MARKET_LIQUIDITY_10,
   MARKET_LIQUIDITY_15,
-  MARKET_LIQUIDITY_20
+  MARKET_LIQUIDITY_20,
+  MARKET_LIQUIDITY_100
 } from "modules/filter-sort/constants/market-sort-params";
 import {
   MARKET_OPEN,
@@ -45,6 +46,7 @@ const sortOptions = [
   { value: MARKET_LIQUIDITY_10, label: "Liquidity, <10% Spread" },
   { value: MARKET_LIQUIDITY_15, label: "Liquidity, <15% Spread" },
   { value: MARKET_LIQUIDITY_20, label: "Liquidity, <20% Spread" },
+  { value: MARKET_LIQUIDITY_100, label: "Liquidity, All Spreads" },
   { value: MARKET_CREATION_TIME, label: "Creation Time" },
   { value: MARKET_END_DATE, label: "Reporting Starts" },
   { value: MARKET_RECENTLY_TRADED, label: "Recently Traded" },

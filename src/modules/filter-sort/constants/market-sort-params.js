@@ -7,6 +7,7 @@ export const MARKET_OPEN_INTEREST = "openInterest";
 export const MARKET_LIQUIDITY_10 = "liquidity10";
 export const MARKET_LIQUIDITY_15 = "liquidity15";
 export const MARKET_LIQUIDITY_20 = "liquidity20";
+export const MARKET_LIQUIDITY_100 = "liquidity100";
 
 // The user should be able to sort by:
 

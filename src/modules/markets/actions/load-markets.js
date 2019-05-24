@@ -11,7 +11,8 @@ import {
   MARKET_OPEN_INTEREST,
   MARKET_LIQUIDITY_10,
   MARKET_LIQUIDITY_15,
-  MARKET_LIQUIDITY_20
+  MARKET_LIQUIDITY_20,
+  MARKET_LIQUIDITY_100
 } from "modules/filter-sort/constants/market-sort-params";
 import {
   MARKET_REPORTING,
@@ -130,6 +131,12 @@ export const loadMarketsByFilter = (filterOptions, cb = () => {}) => (
       sort.sortBy = "liquidityTokens";
       sort.isSortDescending = false;
       sort.liquiditySortSpreadPercent = 0.2;
+      break;
+    }
+    case MARKET_LIQUIDITY_100: {
+      sort.sortBy = "liquidityTokens";
+      sort.isSortDescending = false;
+      sort.liquiditySortSpreadPercent = 1;
       break;
     }
     default: {
