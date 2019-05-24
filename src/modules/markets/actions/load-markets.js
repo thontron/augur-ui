@@ -136,7 +136,7 @@ export const loadMarketsByFilter = (filterOptions, cb = () => {}) => (
     case MARKET_LIQUIDITY_100: {
       sort.sortBy = "liquidityTokens";
       sort.isSortDescending = false;
-      sort.liquiditySortSpreadPercent = 1;
+      sort.liquiditySortSpreadPercent = 0.97; // TODO this is 97% right now instead of 100% because extremely large quantity orders with small prices are effectively a denial of service attack against the liquidity algorithm because it incrementally consumes _quantity_
       break;
     }
     default: {
