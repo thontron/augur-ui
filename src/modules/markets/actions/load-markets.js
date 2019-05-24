@@ -117,25 +117,25 @@ export const loadMarketsByFilter = (filterOptions, cb = () => {}) => (
     }
     case MARKET_LIQUIDITY_10: {
       sort.sortBy = "liquidityTokens";
-      sort.isSortDescending = false;
+      sort.isSortDescending = true;
       sort.liquiditySortSpreadPercent = 0.1;
       break;
     }
     case MARKET_LIQUIDITY_15: {
       sort.sortBy = "liquidityTokens";
-      sort.isSortDescending = false;
+      sort.isSortDescending = true;
       sort.liquiditySortSpreadPercent = 0.15;
       break;
     }
     case MARKET_LIQUIDITY_20: {
       sort.sortBy = "liquidityTokens";
-      sort.isSortDescending = false;
+      sort.isSortDescending = true;
       sort.liquiditySortSpreadPercent = 0.2;
       break;
     }
     case MARKET_LIQUIDITY_100: {
       sort.sortBy = "liquidityTokens";
-      sort.isSortDescending = false;
+      sort.isSortDescending = true;
       sort.liquiditySortSpreadPercent = 0.97; // TODO this is 97% right now instead of 100% because extremely large quantity orders with small prices are effectively a denial of service attack against the liquidity algorithm because it incrementally consumes _quantity_
       break;
     }
