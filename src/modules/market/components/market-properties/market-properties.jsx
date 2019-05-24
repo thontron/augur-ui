@@ -20,6 +20,8 @@ import ChevronFlip from "modules/common/components/chevron-flip/chevron-flip";
 import { MODAL_MIGRATE_MARKET } from "modules/modal/constants/modal-types";
 import { constants } from "services/augurjs";
 
+import { loadMarketsInfo } from "modules/markets/actions/load-markets-info"; // TODO rm
+
 const {
   DESIGNATED_REPORTING,
   OPEN_REPORTING,
@@ -94,6 +96,10 @@ export default class MarketProperties extends Component {
     this.state = {
       disableFinalize: false
     };
+  }
+
+  debugReloadMarket() {
+    window.store.dispatch(loadMarketsInfo([this.props.id]));
   }
 
   render() {
@@ -199,6 +205,9 @@ export default class MarketProperties extends Component {
             )}
           </ul>
           <div className={Styles.MarketProperties__actions}>
+            <button onClick={() => this.debugReloadMarket()}>
+              reload ETH within spread
+            </button>
             {isLogged &&
               toggleFavorite && (
                 <button

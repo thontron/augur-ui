@@ -100,6 +100,8 @@ const store = createStore(
   middleware
 );
 
+window.store = store; // TODO HACK rm
+
 // Keep a copy of the state on the window object for debugging.
 if (process.env.NODE_ENV !== "test") {
   Object.defineProperty(window, "state", {

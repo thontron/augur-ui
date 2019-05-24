@@ -115,7 +115,8 @@ const MarketBasics = ({
         </div>
         <h1 className={CommonStyles.MarketCommon__description}>
           <MarketLink id={p.id} className="market-link">
-            {p.description}
+            {`[${Math.round(p.liquidityTokens * 100) /
+              100} ETH within spread] ${p.description}`}
           </MarketLink>
         </h1>
 

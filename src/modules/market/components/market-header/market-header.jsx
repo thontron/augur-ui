@@ -32,6 +32,7 @@ export default class MarketHeader extends Component {
     location: PropTypes.object.isRequired,
     finalizeMarket: PropTypes.func.isRequired,
     isMobileSmall: PropTypes.bool.isRequired,
+    liquidityTokens: PropTypes.number.isRequired,
     isForking: PropTypes.bool
   };
 
@@ -110,6 +111,9 @@ export default class MarketHeader extends Component {
       details += warningText;
     }
 
+    const liquidityTokensRender =
+      Math.round(this.props.liquidityTokens * 100) / 100;
+
     return (
       <section className={Styles.MarketHeader}>
         <div
@@ -137,7 +141,9 @@ export default class MarketHeader extends Component {
         </div>
         <div className={Styles[`MarketHeader__main-values`]}>
           <div className={Styles.MarketHeader__descContainer}>
-            <h1 className={Styles.MarketHeader__description}>{description}</h1>
+            <h1
+              className={Styles.MarketHeader__description}
+            >{`[${liquidityTokensRender} ETH within spread] ${description}`}</h1>
             <div className={Styles.MarketHeader__descriptionContainer}>
               <div
                 className={Styles.MarketHeader__details}
